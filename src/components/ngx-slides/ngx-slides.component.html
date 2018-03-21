@@ -1,0 +1,13 @@
+<div class="slides-wrapper" [style.width]="config.width" [style.height]="config.height">
+  <div class="slide" *ngFor="let slide of slideImages;let ind = index;" [ngClass]="{'active':currentSlide == ind}">
+    <figure>
+      <img class="slide-img" [src]="slide.image" [style.width]="config.width" [style.maxHeight]="config.height">
+      <figcaption class="slide-caption">
+        <span>{{slide.title}}</span>
+      </figcaption>
+    </figure>
+  </div>
+  <nav class="slides-buttons">
+    <span class="button" [ngClass]="{'active': currentSlide == i}" (click)="moveToSlide(i)" *ngFor="let s of slideImages; let i = index"></span>
+  </nav>
+</div>
