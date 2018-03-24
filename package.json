@@ -1,6 +1,6 @@
 {
   "name": "ngx-slides",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "ngx-slides is a lightweight slideshow component for Anguar 4 applications and fully configurable.",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
