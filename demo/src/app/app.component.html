@@ -1,0 +1,134 @@
+<div class="container pt-1">
+  <div class="row white mb-0">
+    <div class="col s12 l6">
+      <h5>ngx-slides demo</h5>
+    </div>
+    <div class="col s12 l6">
+      <a href="https://manishjanky.github.io/#/" class="blue-text right credits" target="_blank">Developed By:Manish</a>
+    </div>
+  </div>
+  <div class="center row">
+    <h1 class="blue-text">ngx-slides</h1>
+
+    <h5 class="blue-text">Custom Dropdown component for Angular 2+ applications with multiple and single selection options.</h5>
+    <div>
+      <a href="https://github.com/manishjanky/ngx-slides" class="btn blue" style="margin:10px;">
+        <span class="fa fa-github"> Github</span>
+      </a>
+      <a href="https://github.com/manishjanky/ngx-slides/issues" class="btn blue" style="margin:10px;">
+        <span class="fa fa-bug"> Report a bug</span>
+      </a>
+    </div>
+  </div>
+  <div class="row nav-tabs white">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s2">
+          <a class="nav-link" [ngClass]="{'active':tab==1}" (click)="tab=1">Documentation</a>
+        </li>
+        <li class="tab col s2">
+          <a class="nav-link" [ngClass]="{'active':tab==2}" (click)="tab=2">Demo</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row white content" *ngIf="tab==1">
+    <div class="col s12 pt-1">
+      <h4>1.Installation</h4>
+      <pre class="codeBlock">
+        //using npm
+        <strong> npm install ngx-slides</strong>
+
+        //using yarn
+        <strong> yarn add ngx-slides</strong>
+        <strong> yarn install</strong></pre>
+      <ul>
+        <li>include styles in you angular-cli.json.</li>
+      </ul>
+
+      <pre class="codeBlock">
+        //in angular-cli.json
+         <strong>"styles": [
+            "../node_modules/ngx-slides/dist/assets/style.css"
+          ]</strong></pre>
+    </div>
+    <div class="col s12 pt-1">
+      <h4>2.Using with webpack and tsc builds/ angular-cli builds</h4>
+      <ul>
+        <li>import NgxSlidesModule from ngx-slides</li>
+        <li>add NgxSlidesModule to the imports of your NgModule</li>
+      </ul>
+      <pre class="codeBlock">
+        <strong>
+          import {{'{'}} NgxSlidesModule {{'}'}} from 'ngx-slides'
+        
+          @NgModule({{'{'}}
+            imports: [
+              ...,
+          
+              NgxSlidesModule
+            ],
+            ...
+          })
+          class YourModule {{'{'}} ... {{'}'}}</strong></pre>
+    </div>
+    <div class="col s12 pt-1">
+      <ul>
+        <li>
+          use
+          <strong>&lt;ngx-slides&gt;&lt;/ngx-slides&gt;</strong> in your templates to add the slider in your view like below
+        </li>
+        <li>a tag in you html will look like below with all the config</li>
+      </ul>
+
+      <pre class="codeBlock">
+          <strong>&lt;ngx-slides [config]="config" [slideImages]="slideImages" &gt;&lt;/ngx-slides&gt;</strong></pre>
+    </div>
+    <div class="col s12 pt-1">
+      <h4>3.Config</h4>
+      <h6>Input</h6>
+      <ul>
+        <li>
+          <strong>slideImages: any[]</strong> - array of uri's for the images in the slides
+        </li>
+      </ul>
+      <pre class="codeBlock">
+        config = {{'[{'}}
+          image: '/assets/image2.jpg', //image uri
+          title: "Image 2" //image title
+          {{'}]'}}</pre>
+      <ul>
+        <li>
+          <strong>config: Object </strong> - configuration object.
+        </li>
+      </ul>
+      <pre class="codeBlock">
+          config = {{'{'}}
+            width:"800px" //width of the slider defaults to 800px
+            height:"300px" //height of the slider defaults to 300px
+            autoPlay: true/false // base on whether autoplay required or not
+            delay:3000 //delay for autoplay in ms defaults to 3000ms
+            {{'}'}}</pre>
+    </div>
+
+  </div>
+
+  <div class="row white content" *ngIf="tab==2">
+    <div class="col s12">
+      <h3>Demos</h3>
+      <h5>Slideshow with autoplay</h5>
+      <div class="row">
+        <div class="col s12">
+          <ngx-slides  [config]="config" [slideImages]="slideImages"></ngx-slides>
+        </div>
+      </div>
+
+      <h5>Slideshow without autoplay</h5>
+      <div class="row">
+        <div class="col s12 l6">
+          <ngx-slides [config]="confign" [slideImages]="slideImages"></ngx-slides>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
