@@ -13,7 +13,7 @@
 
 `ngx-slides` is a lightweight slideshow component for Anguar 4 applications and fully configurable.
 
-##Features
+## Features
 * Autoplay
 * Navigation buttons
 * Customizable delay time, height, widths 
