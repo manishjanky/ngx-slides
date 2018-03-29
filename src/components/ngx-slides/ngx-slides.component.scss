@@ -35,28 +35,30 @@
        
         
     }
-    .slides-buttons{
-        width:100%;
-            position: absolute;
-            bottom: 5px;
-            text-align: center;
-            z-index: 100;  
-            .button {
-                background-color:aliceblue;
-                display: inline-block;
-                margin: 2px;
-                width: 15px;
-                height: 15px;
-                border-radius: 50%; 
-                opacity: 0.5;
-                &.active{
-                    color:aqua;
-                    transition: color 2s;
-                }
-              
-              }
-        
-    }
+        .slides-buttons{
+            background: transparent !important;
+            width:100%;
+                position: absolute;
+                bottom: 5px;
+                text-align: center;
+                z-index: 100;  
+                .button {
+                    background-color:aliceblue;
+                    display: inline-block;
+                    margin: 2px;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%; 
+                    opacity: 0.5;
+                    &.active{
+                        color:aqua;
+                        transition: color 2s;
+                    }
+                  
+                  }
+            
+        }
+ 
    
     .active{
         opacity: 1 !important;

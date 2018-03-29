@@ -7,7 +7,7 @@
       </figcaption>
     </figure>
   </div>
-  <nav class="slides-buttons">
+  <div class="slides-buttons">
     <span class="button" [ngClass]="{'active': currentSlide == i}" (click)="moveToSlide(i)" *ngFor="let s of slideImages; let i = index"></span>
-  </nav>
+  </div>
 </div>

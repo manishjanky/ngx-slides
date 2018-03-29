@@ -7,8 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NgxSlidesComponent implements OnInit {
   @Input() public slideImages: any[];
-  @Input()
-  public config: any = {
+  @Input() public config: any = {
     width: '800px',
     height: '300px',
     autoPlay: false,
