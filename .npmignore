@@ -23,6 +23,9 @@ coverage/
 docs
 tmp
 
+# Demo files
+demo
+
 tsconfig*
 tslint*
 webpack*
